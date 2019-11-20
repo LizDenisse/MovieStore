@@ -1,0 +1,41 @@
+﻿@model MovieStore.Models.Products
+
+@{
+    ViewData["Title"] = "Buy";
+}
+
+<h1>Details</h1>
+<form method="post" action="Receipt">
+    <div>
+        <h4>Details</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+        </dl>
+    </div>
+    
+
+        <a asp-action="ConfirmBuy"  asp-route-id="@Model.Id"> Buy </a>
+
+</form>
+
+<a asp-action="Index">Back to List</a>
+

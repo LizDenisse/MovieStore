@@ -1,0 +1,14 @@
+﻿@model MovieStore.Models.Users
+
+@{
+    ViewData["Title"] = "Login";
+}
+<h2 style=" color:red">@ViewBag.Error </h2>
+
+<h1>Login</h1>
+
+<form class=" form-inline" action="/Shop/Result">
+    <label for="search " class="mr-1"> Search </label>
+    <input type="search" class="form-control mr-1" id="search" name="search" placeholder="Search" />
+    <button type="submit" class="btn btn-primary"> Go </button>
+</form>

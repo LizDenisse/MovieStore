@@ -1,0 +1,48 @@
+﻿
+@model IEnumerable<MovieStore.Models.Cart>
+
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<h1>Receipt</h1>
+
+<table class="table">
+
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    }
+
+
+            </tr>
+        }
+    </tbody>
+    <p>Your SubTotal is  @ViewBag.SubTotal</p>
+    <p>Your Total is  @ViewBag.Total</p>
+
+
+    <a asp-action="Payment" asp-action="Payment">"Payment"</a>
+
+
+</table>
